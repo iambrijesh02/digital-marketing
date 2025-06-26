@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandroare - Digital Marketing & Technology Solutions</title>   
+    <meta name="description" content="Brandroare offers cutting-edge digital marketing and technology solutions to help businesses grow online. From SEO and social media to web development and automation, we drive results that matter." />
+    <meta name="keywords" content="Brandroare, digital marketing agency, SEO services, social media marketing, PPC, web development, marketing automation, online growth, branding solutions, tech agency" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    
+    <style>
+        
+
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--light-green);
+            border-top: 4px solid var(--primary-green);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 168, 107, 0.3);
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <div id="site-header"></div>
+ 
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="animate__animated animate__fadeInUp">
+                        Transform Your <span class="highlight">Digital Presence</span> with Innovation
+                    </h1>
+                    <p class="animate__animated animate__fadeInUp animate__delay-1s">
+                        We're a cutting-edge digital marketing and technology company that helps businesses thrive in the digital landscape through innovative solutions, creative strategies, and advanced technology.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap animate__animated animate__fadeInUp animate__delay-2s">
+                        <button class="btn btn-primary btn-lg">Start Your Journey</button>
+                        <button class="btn btn-outline-primary btn-lg">View Our Work</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         alt="Digital Marketing Team" class="img-fluid hero-image animate__animated animate__fadeInRight animate__delay-1s">
+                </div>
+            </div>
+        </div>
+        
+       
+        <div class="floating-element">
+            <i class="fas fa-rocket" style="font-size: 2rem; color: var(--primary-green); opacity: 0.3;"></i>
+        </div>
+        <div class="floating-element">
+            <i class="fas fa-chart-line" style="font-size: 2rem; color: var(--accent-blue); opacity: 0.3;"></i>
+        </div>
+        <div class="floating-element">
+            <i class="fas fa-lightbulb" style="font-size: 2rem; color: var(--accent-purple); opacity: 0.3;"></i>
+        </div>
+    </section>
+
+  
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">About Brandroare</h2>
+                    <p class="section-subtitle">We are passionate about helping businesses succeed in the digital world through innovative marketing strategies and cutting-edge technology solutions.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-lg-6">
+                    <div class="vision-mission-card">
+                        <div class="icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>To be the leading digital transformation partner that empowers businesses to achieve unprecedented growth through innovative technology and creative marketing solutions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="vision-mission-card">
+                        <div class="icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To deliver exceptional digital marketing and technology services that drive measurable results, foster innovation, and create lasting partnerships with our clients.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         alt="Our Story" class="img-fluid rounded-4 shadow">
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <h3 class="mb-4">Our Story</h3>
+                    <p class="mb-3">Founded in 2020, Brandroare emerged from a simple yet powerful vision: to bridge the gap between traditional business practices and the digital future. Our journey began with a small team of passionate digital enthusiasts who believed that every business deserves to thrive in the digital landscape.</p>
+                    <p class="mb-4">Today, we've grown into a comprehensive digital solutions provider, serving clients across various industries and helping them achieve remarkable growth through our innovative approaches and cutting-edge technologies.</p>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="text-center">
+                                <h4 class="text-primary mb-1">500+</h4>
+                                <small class="text-muted">Projects Completed</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <h4 class="text-primary mb-1">200+</h4>
+                                <small class="text-muted">Happy Clients</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-subtitle">We offer comprehensive digital marketing and technology solutions to help your business grow and succeed in the competitive digital landscape.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>SEO Optimization</h4>
+                        <p>Boost your online visibility and drive organic traffic with our comprehensive SEO strategies and proven techniques.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Keyword Research</li>
+                            <li><i class="fas fa-check text-success me-2"></i>On-Page SEO</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Technical SEO</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h4>Social Media Marketing</h4>
+                        <p>Build your brand presence and engage with your audience across all major social media platforms.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Content Strategy</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Community Management</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Paid Advertising</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Web Development</h4>
+                        <p>Create stunning, responsive websites that convert visitors into customers with our expert development team.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Custom Development</li>
+                            <li><i class="fas fa-check text-success me-2"></i>E-commerce Solutions</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Mobile Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Mobile App Development</h4>
+                        <p>Transform your ideas into powerful mobile applications for iOS and Android platforms.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Native Development</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Cross-Platform Apps</li>
+                            <li><i class="fas fa-check text-success me-2"></i>UI/UX Design</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4>Digital Analytics</h4>
+                        <p>Make data-driven decisions with our comprehensive analytics and reporting solutions.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Performance Tracking</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Custom Dashboards</li>
+                            <li><i class="fas fa-check text-success me-2"></i>ROI Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>Brand Design</h4>
+                        <p>Create a memorable brand identity that resonates with your target audience and stands out from the competition.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Logo Design</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Brand Guidelines</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Marketing Materials</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="why-choose section-padding">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Why Choose Brandroare?</h2>
+                    <p class="section-subtitle">We combine creativity, technology, and strategy to deliver exceptional results that drive your business forward.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h5>Proven Expertise</h5>
+                        <p>5+ years of experience delivering successful digital solutions across various industries.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h5>Dedicated Team</h5>
+                        <p>A team of passionate professionals committed to your success and growth.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h5>Innovation First</h5>
+                        <p>We stay ahead of trends and use cutting-edge technologies to give you a competitive edge.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h5>Partnership Approach</h5>
+                        <p>We work as your trusted partner, not just a service provider, ensuring long-term success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="industries section-padding" id="industries">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Industries We Serve</h2>
+                    <p class="section-subtitle">Our expertise spans across multiple industries, helping businesses of all sizes achieve their digital goals.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h5>E-commerce</h5>
+                        <p>Online retail and marketplace solutions</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h5>Healthcare</h5>
+                        <p>Medical and wellness digital solutions</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h5>Education</h5>
+                        <p>EdTech and learning platforms</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h5>Food & Beverage</h5>
+                        <p>Restaurant and food delivery solutions</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h5>Real Estate</h5>
+                        <p>Property and construction digital marketing</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h5>Automotive</h5>
+                        <p>Vehicle and transportation solutions</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h5>Travel & Tourism</h5>
+                        <p>Hospitality and travel booking platforms</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h5>Finance</h5>
+                        <p>FinTech and banking solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="technology section-padding">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Technology We Use</h2>
+                    <p class="section-subtitle">We leverage the latest technologies and tools to deliver cutting-edge solutions that drive results.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h6>React</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <h6>Node.js</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h6>Python</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h6>AWS</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h6>Google Cloud</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <h6>Docker</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-angular"></i>
+                        </div>
+                        <h6>Angular</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-vuejs"></i>
+                        </div>
+                        <h6>Vue.js</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-laravel"></i>
+                        </div>
+                        <h6>Laravel</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-wordpress"></i>
+                        </div>
+                        <h6>WordPress</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-shopify"></i>
+                        </div>
+                        <h6>Shopify</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h6>MongoDB</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="case-studies section-padding" id="case-studies">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Case Studies</h2>
+                    <p class="section-subtitle">Discover how we've helped businesses achieve remarkable growth through our innovative digital solutions.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="case-study-card">
+                        <div class="case-study-image" style="background-image: url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800');">
+                            <div class="case-study-overlay">
+                                <button class="btn btn-light">View Case Study</button>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <h5>E-commerce Growth Strategy</h5>
+                            <p>Increased online sales by 300% for a fashion retailer through comprehensive digital marketing.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-success">E-commerce</span>
+                                <small class="text-muted">6 months project</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="case-study-card">
+                        <div class="case-study-image" style="background-image: url('https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800');">
+                            <div class="case-study-overlay">
+                                <button class="btn btn-light">View Case Study</button>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <h5>Healthcare App Development</h5>
+                            <p>Developed a telemedicine platform that serves 10,000+ patients monthly.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-info">Healthcare</span>
+                                <small class="text-muted">8 months project</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="case-study-card">
+                        <div class="case-study-image" style="background-image: url('https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800');">
+                            <div class="case-study-overlay">
+                                <button class="btn btn-light">View Case Study</button>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <h5>Restaurant Chain Digital Transformation</h5>
+                            <p>Implemented online ordering system resulting in 250% increase in digital orders.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-warning">Food & Beverage</span>
+                                <small class="text-muted">4 months project</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="team section-padding" id="team">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Meet Our Team</h2>
+                    <p class="section-subtitle">Our diverse team of experts brings together creativity, technical expertise, and strategic thinking to deliver exceptional results.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <img src="https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=300" 
+                             alt="Sarah Johnson" class="team-avatar">
+                        <h5>Sarah Johnson</h5>
+                        <p class="text-muted">CEO & Founder</p>
+                        <p class="small">Visionary leader with 10+ years in digital marketing and business strategy.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=300" 
+                             alt="Michael Chen" class="team-avatar">
+                        <h5>Michael Chen</h5>
+                        <p class="text-muted">CTO</p>
+                        <p class="small">Technology expert specializing in scalable web applications and cloud solutions.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=300" 
+                             alt="Emily Rodriguez" class="team-avatar">
+                        <h5>Emily Rodriguez</h5>
+                        <p class="text-muted">Creative Director</p>
+                        <p class="small">Award-winning designer with expertise in brand identity and user experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=300" 
+                             alt="David Thompson" class="team-avatar">
+                        <h5>David Thompson</h5>
+                        <p class="text-muted">Marketing Director</p>
+                        <p class="small">Data-driven marketer with proven track record in growth hacking and ROI optimization.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="gallery section-padding">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Our Work Gallery</h2>
+                    <p class="section-subtitle">Take a look at some of our recent projects and creative work that showcase our expertise and attention to detail.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 1">
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 2">
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 3">
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 4">
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 5">
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="500">0</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="200">0</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="50">0</span>
+                        <span class="stat-label">Team Members</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq section-padding">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Find answers to common questions about our services and processes.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What services does Brandroare offer?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer comprehensive digital marketing and technology services including SEO optimization, social media marketing, web development, mobile app development, digital analytics, and brand design. Our team specializes in creating custom solutions tailored to your business needs.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How long does a typical project take?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Project timelines vary depending on scope and complexity. Simple websites typically take 4-6 weeks, while complex applications can take 3-6 months. We provide detailed timelines during our initial consultation and keep you updated throughout the process.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Do you provide ongoing support and maintenance?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we offer comprehensive support and maintenance packages to ensure your digital assets continue to perform optimally. This includes regular updates, security monitoring, performance optimization, and technical support.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    What industries do you work with?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We work with businesses across various industries including e-commerce, healthcare, education, food & beverage, real estate, automotive, travel & tourism, and finance. Our adaptable approach allows us to serve clients in virtually any sector.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    How do you measure project success?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We establish clear KPIs and success metrics at the beginning of each project. These may include website traffic, conversion rates, app downloads, user engagement, or ROI depending on your goals. We provide regular reports and analytics to track progress.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    What is your pricing structure?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our pricing is project-based and depends on scope, complexity, and timeline. We offer competitive rates and flexible payment options. Contact us for a free consultation and custom quote tailored to your specific requirements.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Ready to transform your digital presence? Let's discuss your project and create something amazing together.</p>
+                </div>
+            </div>
+            
+            <div class="row g-5">
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <h4 class="mb-4">Send us a message</h4>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="col-12">
+                                    <label for="company" class="form-label">Company Name</label>
+                                    <input type="text" class="form-control" id="company">
+                                </div>
+                                <div class="col-12">
+                                    <label for="service" class="form-label">Service Interested In *</label>
+                                    <select class="form-control" id="service" required>
+                                        <option value="">Select a service</option>
+                                        <option value="seo">SEO Optimization</option>
+                                        <option value="social-media">Social Media Marketing</option>
+                                        <option value="web-development">Web Development</option>
+                                        <option value="mobile-app">Mobile App Development</option>
+                                        <option value="analytics">Digital Analytics</option>
+                                        <option value="brand-design">Brand Design</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="budget" class="form-label">Project Budget</label>
+                                    <select class="form-control" id="budget">
+                                        <option value="">Select budget range</option>
+                                        <option value="5k-10k">$5,000 - $10,000</option>
+                                        <option value="10k-25k">$10,000 - $25,000</option>
+                                        <option value="25k-50k">$25,000 - $50,000</option>
+                                        <option value="50k+">$50,000+</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Project Details *</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Tell us about your project, goals, and requirements..." required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletter">
+                                        <label class="form-check-label" for="newsletter">
+                                            Subscribe to our newsletter for digital marketing tips and updates
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <h4 class="mb-4">Contact Information</h4>
+                        
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h6>Our Office</h6>
+                                <p>123 Digital Street<br>Tech City, TC 12345<br>United States</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h6>Phone</h6>
+                                <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h6>Email</h6>
+                                <p>hello@brandroare.com<br>support@brandroare.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h6>Business Hours</h6>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h6>Follow Us</h6>
+                            <div class="social-links">
+                                <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="me-2"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <div id="site-footer"></div>
+  <div id="site-disclaimer"></div>
+ 
+
+    <!-- Scroll to Top Button -->
+    <a href="#home" class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  
+     <script src="assets/js/include.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+ 
+</body>
+</html>
