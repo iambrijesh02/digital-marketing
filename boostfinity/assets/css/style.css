@@ -104,10 +104,7 @@
             z-index: 2;
         }
 
-        .hero-image img {
-            border-radius: 16px;
-            box-shadow: 0 20px 40px rgba(0, 82, 255, 0.1);
-        }
+    
 
         /* Services Section */
         .services {
@@ -247,6 +244,147 @@
             color: var(--white);
         }
 
+
+        .boostfinity-trusted h2 {
+            font-size: 2rem;
+            }
+
+            .boostfinity-trusted img {
+            width: 200px;
+            }
+
+            /* Section padding and background */
+.boostfinity-faq {
+  background-color: #f9f9f9;
+  padding: 4rem 0;
+}
+
+/* FAQ title styling */
+.boostfinity-faq h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Accordion card styling */
+.accordion-item {
+  background-color: #fff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Accordion header button */
+.accordion-button {
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #333;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+/* On hover or active */
+.accordion-button:not(.collapsed) {
+  background-color: #eaf0ff;
+  color: #1a1a1a;
+  box-shadow: none;
+}
+
+/* Arrow icon custom */
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23007bff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 5l6 6 6-6'/%3E%3C/svg%3E");
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+
+/* Accordion body content */
+.accordion-body {
+  font-size: 0.95rem;
+  color: #555;
+  padding: 1rem 1.5rem 1.5rem;
+  line-height: 1.6;
+}
+
+
+.boostfinity-cta {
+  background-color: #f0f4ff; /* soft background to separate section */
+}
+
+.boostfinity-cta .bg-primary {
+  background: linear-gradient(135deg, #0047AB, #007BFF);
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.boostfinity-cta .bg-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.boostfinity-cta h2 {
+  font-size: 2.2rem;
+}
+
+.boostfinity-cta p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.boostfinity-cta .btn {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boostfinity-cta .btn:hover {
+  background-color: #f8f9fa;
+  color: #0056b3;
+}
+
+.boostfinity-testimonials {
+  background-color: var(--bg-light);
+}
+
+.boostfinity-testimonials h2 {
+  font-size: 2.2rem;
+  color: var(--text-dark);
+}
+
+.boostfinity-testimonials .testimonial-card {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boostfinity-testimonials .testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.boostfinity-testimonials .testimonial-text {
+  font-size: 1rem;
+  color: var(--text-light);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.boostfinity-testimonials img {width: 50px;}
+
+.breadcrumb {    background-color: rgb(226 235 254) !important;color:#0e2a65;}
+
+
+
+
         /* Modal Styles */
         .modal-content {
             border-radius: 16px;
@@ -261,3 +399,4 @@
         .modal-body {
             padding: 20px 30px 30px;
         }
+
