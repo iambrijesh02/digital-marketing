@@ -1,16 +1,16 @@
 :root {
-            --primary-green: #00A86B;
-            --secondary-green: #00C878;
-            --dark-green: #008B5A;
-            --light-green: #E8F5F0;
-            --accent-blue: #3B82F6;
-            --accent-purple: #8B5CF6;
-            --text-dark: #2D3748;
-            --text-light: #718096;
-            --bg-light: #F7FAFC;
-            --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
-            --gradient-secondary: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%);
-        }
+    --primary-purple: #A100FF;
+    --secondary-purple: #7F00FF;
+    --dark-purple: #4B0082;
+    --light-purple: #F3E8FF;
+    --accent-black: #000000;
+    --accent-gray: #444444;
+    --text-dark: #1A1A1A;
+    --text-light: #A0AEC0;
+    --bg-light: #FFFFFF;
+    --gradient-primary: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--accent-black) 0%, var(--dark-purple) 100%);
+}
 
         * {
             margin: 0;
@@ -674,7 +674,7 @@
 
         /* Footer */
         .footer {
-            background: var(--text-dark);
+            background-color: #4B0082;
             color: white;
             padding: 4rem 0 2rem;
         }
@@ -809,7 +809,7 @@
 
             /* Section Styles */
         .section-padding {
-            padding: 6rem 0;
+            padding: 3rem 0;
         }
 
         .section-title {
