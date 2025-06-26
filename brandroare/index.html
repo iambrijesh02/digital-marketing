@@ -1,0 +1,2168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandroare - Digital Marketing & Technology Solutions</title>
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    
+    <style>
+        :root {
+            --primary-green: #00A86B;
+            --secondary-green: #00C878;
+            --dark-green: #008B5A;
+            --light-green: #E8F5F0;
+            --accent-blue: #3B82F6;
+            --accent-purple: #8B5CF6;
+            --text-dark: #2D3748;
+            --text-light: #718096;
+            --bg-light: #F7FAFC;
+            --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            --gradient-secondary: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-green);
+            border-radius: 4px;
+        }
+
+        /* Header Styles */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 2rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-green) !important;
+            transform: translateY(-2px);
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: var(--primary-green);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            background: var(--gradient-primary);
+            border: none;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 168, 107, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 168, 107, 0.4);
+        }
+
+        .btn-outline-primary {
+            color: var(--primary-green);
+            border: 2px solid var(--primary-green);
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-primary:hover {
+            background: var(--primary-green);
+            border-color: var(--primary-green);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 168, 107, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--light-green) 0%, rgba(255,255,255,0.9) 50%, var(--bg-light) 100%);
+            padding: 8rem 0 6rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23E8F5F0" opacity="0.3"/><circle cx="75" cy="75" r="1" fill="%2300A86B" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero .highlight {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.02);
+        }
+
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Section Styles */
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .vision-mission-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid rgba(0, 168, 107, 0.1);
+        }
+
+        .vision-mission-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .vision-mission-card .icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .vision-mission-card .icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--bg-light);
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid rgba(0, 168, 107, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--light-green);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--gradient-primary);
+        }
+
+        .service-icon i {
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            transition: color 0.3s ease;
+        }
+
+        .service-card:hover .service-icon i {
+            color: white;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose {
+            background: white;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item .icon {
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover .icon {
+            transform: scale(1.1);
+        }
+
+        .feature-item .icon i {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        /* Industries Section */
+        .industries {
+            background: var(--bg-light);
+        }
+
+        .industry-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .industry-card:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .industry-icon {
+            font-size: 3rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        /* Technology Section */
+        .technology {
+            background: white;
+        }
+
+        .tech-item {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 168, 107, 0.1);
+        }
+
+        .tech-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .tech-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background: var(--light-green);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tech-logo i {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+        }
+
+        /* Case Studies Section */
+        .case-studies {
+            background: var(--bg-light);
+        }
+
+        .case-study-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .case-study-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .case-study-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .case-study-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .case-study-card:hover .case-study-overlay {
+            opacity: 0.9;
+        }
+
+        .case-study-content {
+            padding: 2rem;
+        }
+
+        /* Team Section */
+        .team {
+            background: white;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 168, 107, 0.1);
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            object-fit: cover;
+            border: 4px solid var(--light-green);
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover .team-avatar {
+            border-color: var(--primary-green);
+            transform: scale(1.05);
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--light-green);
+            border-radius: 50%;
+            line-height: 40px;
+            text-align: center;
+            color: var(--primary-green);
+            margin: 0 0.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background: var(--bg-light);
+        }
+
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--gradient-primary);
+            padding: 4rem 0;
+            color: white;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: white;
+        }
+
+        .accordion-item {
+            border: 1px solid rgba(0, 168, 107, 0.2);
+            border-radius: 10px !important;
+            margin-bottom: 1rem;
+        }
+
+        .accordion-button {
+            background: white;
+            color: var(--text-dark);
+            font-weight: 600;
+            border-radius: 10px !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: var(--light-green);
+            color: var(--primary-green);
+        }
+
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(0, 168, 107, 0.25);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--bg-light);
+        }
+
+        .contact-form {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .form-control {
+            border: 2px solid #E2E8F0;
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 0.2rem rgba(0, 168, 107, 0.25);
+        }
+
+        .contact-info {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item .icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+
+        .contact-item .icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer h5 {
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer ul li a {
+            color: #CBD5E0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer ul li a:hover {
+            color: var(--primary-green);
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #4A5568;
+            padding-top: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            color: #CBD5E0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-padding {
+                padding: 4rem 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--light-green);
+            border-top: 4px solid var(--primary-green);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 168, 107, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand animate__animated animate__fadeInLeft" href="#home">Brandroare</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#industries">Industries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#case-studies">Case Studies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-primary">Get Quote</button>
+                    <button class="btn btn-primary">Start Project</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="animate__animated animate__fadeInUp">
+                        Transform Your <span class="highlight">Digital Presence</span> with Innovation
+                    </h1>
+                    <p class="animate__animated animate__fadeInUp animate__delay-1s">
+                        We're a cutting-edge digital marketing and technology company that helps businesses thrive in the digital landscape through innovative solutions, creative strategies, and advanced technology.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap animate__animated animate__fadeInUp animate__delay-2s">
+                        <button class="btn btn-primary btn-lg">Start Your Journey</button>
+                        <button class="btn btn-outline-primary btn-lg">View Our Work</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         alt="Digital Marketing Team" class="img-fluid hero-image animate__animated animate__fadeInRight animate__delay-1s">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-element">
+            <i class="fas fa-rocket" style="font-size: 2rem; color: var(--primary-green); opacity: 0.3;"></i>
+        </div>
+        <div class="floating-element">
+            <i class="fas fa-chart-line" style="font-size: 2rem; color: var(--accent-blue); opacity: 0.3;"></i>
+        </div>
+        <div class="floating-element">
+            <i class="fas fa-lightbulb" style="font-size: 2rem; color: var(--accent-purple); opacity: 0.3;"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">About Brandroare</h2>
+                    <p class="section-subtitle">We are passionate about helping businesses succeed in the digital world through innovative marketing strategies and cutting-edge technology solutions.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-lg-6">
+                    <div class="vision-mission-card">
+                        <div class="icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>To be the leading digital transformation partner that empowers businesses to achieve unprecedented growth through innovative technology and creative marketing solutions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="vision-mission-card">
+                        <div class="icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To deliver exceptional digital marketing and technology services that drive measurable results, foster innovation, and create lasting partnerships with our clients.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         alt="Our Story" class="img-fluid rounded-4 shadow">
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <h3 class="mb-4">Our Story</h3>
+                    <p class="mb-3">Founded in 2020, Brandroare emerged from a simple yet powerful vision: to bridge the gap between traditional business practices and the digital future. Our journey began with a small team of passionate digital enthusiasts who believed that every business deserves to thrive in the digital landscape.</p>
+                    <p class="mb-4">Today, we've grown into a comprehensive digital solutions provider, serving clients across various industries and helping them achieve remarkable growth through our innovative approaches and cutting-edge technologies.</p>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="text-center">
+                                <h4 class="text-primary mb-1">500+</h4>
+                                <small class="text-muted">Projects Completed</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <h4 class="text-primary mb-1">200+</h4>
+                                <small class="text-muted">Happy Clients</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-subtitle">We offer comprehensive digital marketing and technology solutions to help your business grow and succeed in the competitive digital landscape.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>SEO Optimization</h4>
+                        <p>Boost your online visibility and drive organic traffic with our comprehensive SEO strategies and proven techniques.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Keyword Research</li>
+                            <li><i class="fas fa-check text-success me-2"></i>On-Page SEO</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Technical SEO</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h4>Social Media Marketing</h4>
+                        <p>Build your brand presence and engage with your audience across all major social media platforms.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Content Strategy</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Community Management</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Paid Advertising</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Web Development</h4>
+                        <p>Create stunning, responsive websites that convert visitors into customers with our expert development team.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Custom Development</li>
+                            <li><i class="fas fa-check text-success me-2"></i>E-commerce Solutions</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Mobile Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Mobile App Development</h4>
+                        <p>Transform your ideas into powerful mobile applications for iOS and Android platforms.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Native Development</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Cross-Platform Apps</li>
+                            <li><i class="fas fa-check text-success me-2"></i>UI/UX Design</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4>Digital Analytics</h4>
+                        <p>Make data-driven decisions with our comprehensive analytics and reporting solutions.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Performance Tracking</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Custom Dashboards</li>
+                            <li><i class="fas fa-check text-success me-2"></i>ROI Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>Brand Design</h4>
+                        <p>Create a memorable brand identity that resonates with your target audience and stands out from the competition.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Logo Design</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Brand Guidelines</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Marketing Materials</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose section-padding">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Why Choose Brandroare?</h2>
+                    <p class="section-subtitle">We combine creativity, technology, and strategy to deliver exceptional results that drive your business forward.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h5>Proven Expertise</h5>
+                        <p>5+ years of experience delivering successful digital solutions across various industries.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h5>Dedicated Team</h5>
+                        <p>A team of passionate professionals committed to your success and growth.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h5>Innovation First</h5>
+                        <p>We stay ahead of trends and use cutting-edge technologies to give you a competitive edge.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h5>Partnership Approach</h5>
+                        <p>We work as your trusted partner, not just a service provider, ensuring long-term success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve Section -->
+    <section class="industries section-padding" id="industries">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Industries We Serve</h2>
+                    <p class="section-subtitle">Our expertise spans across multiple industries, helping businesses of all sizes achieve their digital goals.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h5>E-commerce</h5>
+                        <p>Online retail and marketplace solutions</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h5>Healthcare</h5>
+                        <p>Medical and wellness digital solutions</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h5>Education</h5>
+                        <p>EdTech and learning platforms</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h5>Food & Beverage</h5>
+                        <p>Restaurant and food delivery solutions</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h5>Real Estate</h5>
+                        <p>Property and construction digital marketing</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h5>Automotive</h5>
+                        <p>Vehicle and transportation solutions</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h5>Travel & Tourism</h5>
+                        <p>Hospitality and travel booking platforms</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h5>Finance</h5>
+                        <p>FinTech and banking solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology We Use Section -->
+    <section class="technology section-padding">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Technology We Use</h2>
+                    <p class="section-subtitle">We leverage the latest technologies and tools to deliver cutting-edge solutions that drive results.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h6>React</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <h6>Node.js</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h6>Python</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h6>AWS</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h6>Google Cloud</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <h6>Docker</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-angular"></i>
+                        </div>
+                        <h6>Angular</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-vuejs"></i>
+                        </div>
+                        <h6>Vue.js</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-laravel"></i>
+                        </div>
+                        <h6>Laravel</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-wordpress"></i>
+                        </div>
+                        <h6>WordPress</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-shopify"></i>
+                        </div>
+                        <h6>Shopify</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h6>MongoDB</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="case-studies section-padding" id="case-studies">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Case Studies</h2>
+                    <p class="section-subtitle">Discover how we've helped businesses achieve remarkable growth through our innovative digital solutions.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="case-study-card">
+                        <div class="case-study-image" style="background-image: url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800');">
+                            <div class="case-study-overlay">
+                                <button class="btn btn-light">View Case Study</button>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <h5>E-commerce Growth Strategy</h5>
+                            <p>Increased online sales by 300% for a fashion retailer through comprehensive digital marketing.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-success">E-commerce</span>
+                                <small class="text-muted">6 months project</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="case-study-card">
+                        <div class="case-study-image" style="background-image: url('https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800');">
+                            <div class="case-study-overlay">
+                                <button class="btn btn-light">View Case Study</button>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <h5>Healthcare App Development</h5>
+                            <p>Developed a telemedicine platform that serves 10,000+ patients monthly.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-info">Healthcare</span>
+                                <small class="text-muted">8 months project</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="case-study-card">
+                        <div class="case-study-image" style="background-image: url('https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800');">
+                            <div class="case-study-overlay">
+                                <button class="btn btn-light">View Case Study</button>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <h5>Restaurant Chain Digital Transformation</h5>
+                            <p>Implemented online ordering system resulting in 250% increase in digital orders.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-warning">Food & Beverage</span>
+                                <small class="text-muted">4 months project</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="team section-padding" id="team">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Meet Our Team</h2>
+                    <p class="section-subtitle">Our diverse team of experts brings together creativity, technical expertise, and strategic thinking to deliver exceptional results.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <img src="https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=300" 
+                             alt="Sarah Johnson" class="team-avatar">
+                        <h5>Sarah Johnson</h5>
+                        <p class="text-muted">CEO & Founder</p>
+                        <p class="small">Visionary leader with 10+ years in digital marketing and business strategy.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=300" 
+                             alt="Michael Chen" class="team-avatar">
+                        <h5>Michael Chen</h5>
+                        <p class="text-muted">CTO</p>
+                        <p class="small">Technology expert specializing in scalable web applications and cloud solutions.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=300" 
+                             alt="Emily Rodriguez" class="team-avatar">
+                        <h5>Emily Rodriguez</h5>
+                        <p class="text-muted">Creative Director</p>
+                        <p class="small">Award-winning designer with expertise in brand identity and user experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=300" 
+                             alt="David Thompson" class="team-avatar">
+                        <h5>David Thompson</h5>
+                        <p class="text-muted">Marketing Director</p>
+                        <p class="small">Data-driven marketer with proven track record in growth hacking and ROI optimization.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery section-padding">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Our Work Gallery</h2>
+                    <p class="section-subtitle">Take a look at some of our recent projects and creative work that showcase our expertise and attention to detail.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 1">
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 2">
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 3">
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 4">
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 5">
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Project 6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="500">0</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="200">0</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="50">0</span>
+                        <span class="stat-label">Team Members</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq section-padding">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Find answers to common questions about our services and processes.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What services does Brandroare offer?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer comprehensive digital marketing and technology services including SEO optimization, social media marketing, web development, mobile app development, digital analytics, and brand design. Our team specializes in creating custom solutions tailored to your business needs.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How long does a typical project take?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Project timelines vary depending on scope and complexity. Simple websites typically take 4-6 weeks, while complex applications can take 3-6 months. We provide detailed timelines during our initial consultation and keep you updated throughout the process.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Do you provide ongoing support and maintenance?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we offer comprehensive support and maintenance packages to ensure your digital assets continue to perform optimally. This includes regular updates, security monitoring, performance optimization, and technical support.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    What industries do you work with?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We work with businesses across various industries including e-commerce, healthcare, education, food & beverage, real estate, automotive, travel & tourism, and finance. Our adaptable approach allows us to serve clients in virtually any sector.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    How do you measure project success?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We establish clear KPIs and success metrics at the beginning of each project. These may include website traffic, conversion rates, app downloads, user engagement, or ROI depending on your goals. We provide regular reports and analytics to track progress.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    What is your pricing structure?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our pricing is project-based and depends on scope, complexity, and timeline. We offer competitive rates and flexible payment options. Contact us for a free consultation and custom quote tailored to your specific requirements.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Ready to transform your digital presence? Let's discuss your project and create something amazing together.</p>
+                </div>
+            </div>
+            
+            <div class="row g-5">
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <h4 class="mb-4">Send us a message</h4>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="col-12">
+                                    <label for="company" class="form-label">Company Name</label>
+                                    <input type="text" class="form-control" id="company">
+                                </div>
+                                <div class="col-12">
+                                    <label for="service" class="form-label">Service Interested In *</label>
+                                    <select class="form-control" id="service" required>
+                                        <option value="">Select a service</option>
+                                        <option value="seo">SEO Optimization</option>
+                                        <option value="social-media">Social Media Marketing</option>
+                                        <option value="web-development">Web Development</option>
+                                        <option value="mobile-app">Mobile App Development</option>
+                                        <option value="analytics">Digital Analytics</option>
+                                        <option value="brand-design">Brand Design</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="budget" class="form-label">Project Budget</label>
+                                    <select class="form-control" id="budget">
+                                        <option value="">Select budget range</option>
+                                        <option value="5k-10k">$5,000 - $10,000</option>
+                                        <option value="10k-25k">$10,000 - $25,000</option>
+                                        <option value="25k-50k">$25,000 - $50,000</option>
+                                        <option value="50k+">$50,000+</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Project Details *</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Tell us about your project, goals, and requirements..." required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletter">
+                                        <label class="form-check-label" for="newsletter">
+                                            Subscribe to our newsletter for digital marketing tips and updates
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <h4 class="mb-4">Contact Information</h4>
+                        
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h6>Our Office</h6>
+                                <p>123 Digital Street<br>Tech City, TC 12345<br>United States</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h6>Phone</h6>
+                                <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h6>Email</h6>
+                                <p>hello@brandroare.com<br>support@brandroare.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h6>Business Hours</h6>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h6>Follow Us</h6>
+                            <div class="social-links">
+                                <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="me-2"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>Brandroare</h5>
+                    <p>We're a cutting-edge digital marketing and technology company that helps businesses thrive in the digital landscape through innovative solutions and creative strategies.</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="#services">SEO Optimization</a></li>
+                        <li><a href="#services">Social Media Marketing</a></li>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Mobile Apps</a></li>
+                        <li><a href="#services">Digital Analytics</a></li>
+                        <li><a href="#services">Brand Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Industries</h5>
+                    <ul>
+                        <li><a href="#industries">E-commerce</a></li>
+                        <li><a href="#industries">Healthcare</a></li>
+                        <li><a href="#industries">Education</a></li>
+                        <li><a href="#industries">Food & Beverage</a></li>
+                        <li><a href="#industries">Real Estate</a></li>
+                        <li><a href="#industries">Finance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#case-studies">Case Studies</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Resources</h5>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#">Downloads</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>&copy; 2024 Brandroare. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <p>Made with <i class="fas fa-heart text-danger"></i> by Brandroare Team</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="#home" class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Loading Animation
+        window.addEventListener('load', function() {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            setTimeout(() => {
+                loadingOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            const scrollTop = document.getElementById('scrollTop');
+            
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            }
+            
+            // Show/hide scroll to top button
+            if (window.scrollY > 300) {
+                scrollTop.classList.add('show');
+            } else {
+                scrollTop.classList.remove('show');
+            }
+        });
+
+        // Animate stats on scroll
+        const animateStats = () => {
+            const stats = document.querySelectorAll('.stat-number');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const finalValue = parseInt(target.getAttribute('data-count'));
+                        
+                        let current = 0;
+                        const increment = finalValue / 50;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= finalValue) {
+                                target.textContent = finalValue + '+';
+                                clearInterval(timer);
+                            } else {
+                                target.textContent = Math.floor(current) + '+';
+                            }
+                        }, 50);
+                        
+                        observer.unobserve(target);
+                    }
+                });
+            });
+            
+            stats.forEach(stat => observer.observe(stat));
+        };
+
+        // Initialize animations when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            animateStats();
+            
+            // Add scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animation
+            document.querySelectorAll('.service-card, .feature-item, .industry-card, .tech-item, .case-study-card, .team-card, .gallery-item').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Add hover effects to cards
+        document.querySelectorAll('.service-card, .case-study-card, .team-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Gallery lightbox effect (simple implementation)
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                const modal = document.createElement('div');
+                modal.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,0.9);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 9999;
+                    cursor: pointer;
+                `;
+                
+                const modalImg = document.createElement('img');
+                modalImg.src = img.src;
+                modalImg.style.cssText = `
+                    max-width: 90%;
+                    max-height: 90%;
+                    border-radius: 10px;
+                `;
+                
+                modal.appendChild(modalImg);
+                document.body.appendChild(modal);
+                
+                modal.addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                });
+            });
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero');
+            const speed = scrolled * 0.5;
+            
+            if (parallax) {
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+
+        // Add typing effect to hero title
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            
+            type();
+        }
+
+        // Initialize typing effect after page load
+        setTimeout(() => {
+            const heroTitle = document.querySelector('.hero h1');
+            if (heroTitle) {
+                const originalText = heroTitle.textContent;
+                typeWriter(heroTitle, originalText, 50);
+            }
+        }, 1500);
+
+        // Add floating animation to service icons
+        document.querySelectorAll('.service-icon').forEach((icon, index) => {
+            icon.style.animationDelay = `${index * 0.2}s`;
+            icon.classList.add('animate__animated', 'animate__pulse', 'animate__infinite');
+        });
+
+        // Newsletter subscription (if implemented)
+        function subscribeNewsletter(email) {
+            // Simulate newsletter subscription
+            console.log('Newsletter subscription for:', email);
+            return new Promise(resolve => {
+                setTimeout(() => resolve(true), 1000);
+            });
+        }
+
+        // Add intersection observer for fade-in animations
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Apply fade-in animation to sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            fadeInObserver.observe(section);
+        });
+    </script>
+</body>
+</html>
+
+This comprehensive website for Brandroare includes all the requested sections and features:
+
+## **Key Features:**
+- **Responsive Design** - Fully responsive using Bootstrap 5.3
+- **Interactive Elements** - Hover effects, animations, smooth scrolling
+- **Loading Animation** - Professional loading screen
+- **Scroll-to-top Button** - Smooth navigation enhancement
+
+## **Sections Included:**
+1. **Hero Section** - Compelling introduction with CTAs
+2. **About/Vision & Mission** - Company story and values
+3. **Services** - 6 comprehensive service offerings
+4. **Why Choose Us** - Key differentiators
+5. **Industries We Serve** - 8 different industry sectors
+6. **Technology We Use** - 12 technology stack items
+7. **Case Studies** - 3 detailed project showcases
+8. **Our Team** - 4 team member profiles
+9. **Gallery** - 6 project images with lightbox effect
+10. **Stats/Highlights** - Animated counters
+11. **FAQ Section** - 6 common questions with accordion
+12. **Contact/Enquiry Form** - Comprehensive contact form
+13. **Footer** - Complete site navigation and links
+
+## **Interactive Elements:**
+- Animated statistics counters
+- Hover effects on cards and buttons
+- Smooth scrolling navigation
+- Gallery lightbox functionality
+- Form validation and submission
+- Floating elements and parallax effects
+- Typing animation for hero title
+- Scroll-triggered animations
+
+## **Technologies Used:**
+- HTML5, CSS3, JavaScript
+- Bootstrap 5.3 for responsiveness
+- Font Awesome for icons
+- Animate.css for animations
+- Google Fonts (Inter)
+- Pexels images as requested
+
+The design maintains the Gusto.com aesthetic with the green color scheme, clean typography, and professional layout while being specifically tailored for a digital marketing and technology company.
+
