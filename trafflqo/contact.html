@@ -3,182 +3,381 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adlaunchy - Web Development, Digital Marketing & Technology Solutions</title>
-    <meta name="description" content="Adlaunchy - Leading web development, digital marketing and technology company providing innovative business solutions">    
+    <title>TrafflQo - Digital Marketing & Web Design Excellence</title> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
      <link href="assets/css/responsive.css" rel="stylesheet">
+  
 </head>
 <body>
-
+  
     <div id="site-header"></div>
-
-
-     <section class="contact section-padding mt-5" id="contact">
+ 
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container">
-            <div class="row text-center mb-5">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="section-subtitle">Ready to transform your digital presence? Let's discuss your project and create something amazing together.</p>
+            <a class="navbar-brand" href="index.html"><i class="fas fa-chart-line me-2"></i>TrafflQo</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu bg-dark">
+                            <li><a class="dropdown-item text-light" href="index.html#services">Digital Marketing</a></li>
+                            <li><a class="dropdown-item text-light" href="index.html#services">Web Design</a></li>
+                            <li><a class="dropdown-item text-light" href="index.html#services">SEO Optimization</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#clients">Clients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu bg-dark">
+                            <li><a class="dropdown-item text-light" href="#blog">Blog</a></li>
+                            <li><a class="dropdown-item text-light" href="#case-studies">Case Studies</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Company
+                        </a>
+                        <ul class="dropdown-menu bg-dark">
+                            <li><a class="dropdown-item text-light" href="#about">About Us</a></li>
+                            <li><a class="dropdown-item text-light" href="#team">Team</a></li>
+                            <li><a class="dropdown-item text-light" href="#careers">Careers</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-custom">
+                        <i class="fas fa-search me-2"></i>
+                    </button>
+                    <button class="btn btn-outline-custom">Contact Us</button>
+                    <button class="btn btn-primary-custom">Get Started</button>
                 </div>
             </div>
-            
-            <div class="row g-5">
-                <div class="col-lg-8">
-                    <div class="contact-form">
-                        <h4 class="mb-4">Send us a message</h4>
-                        <form id="contactForm">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label for="firstName" class="form-label">First Name *</label>
-                                    <input type="text" class="form-control" id="firstName" required>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="animate__animated animate__fadeInUp">
+                <h1>Get In Touch</h1>
+                <p>Ready to transform your digital presence? Let's discuss how TrafflQo can help your business grow with our AI-powered marketing solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-4 mb-4">
+                    <div class="contact-card fade-in-up">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Call Us</h4>
+                        <p class="text-secondary mb-3">Speak directly with our experts</p>
+                        <h5 class="text-accent">+1 (555) 123-4567</h5>
+                        <p class="text-secondary small">Mon-Fri: 9AM-6PM EST</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="contact-card fade-in-up">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email Us</h4>
+                        <p class="text-secondary mb-3">Get detailed responses to your queries</p>
+                        <h5 class="text-accent">hello@trafflqo.com</h5>
+                        <p class="text-secondary small">Response within 24 hours</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="contact-card fade-in-up">
+                        <div class="contact-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <h4>Schedule Meeting</h4>
+                        <p class="text-secondary mb-3">Book a consultation call</p>
+                        <button class="btn btn-primary-custom">Book Now</button>
+                        <p class="text-secondary small mt-2">30-minute free consultation</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-form fade-in-up">
+                        <h3 class="mb-4 text-center">Send Us a Message</h3>
+                        <div class="success-message" id="successMessage">
+                            <i class="fas fa-check-circle me-2"></i>
+                            Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
+                        </div>
+                        <form id="contactForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label-custom">First Name *</label>
+                                    <input type="text" class="form-control form-control-custom" id="firstName" required placeholder="Enter your first name">
+                                    <div class="invalid-feedback">Please provide your first name.</div>
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="lastName" class="form-label">Last Name *</label>
-                                    <input type="text" class="form-control" id="lastName" required>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label-custom">Last Name *</label>
+                                    <input type="text" class="form-control form-control-custom" id="lastName" required placeholder="Enter your last name">
+                                    <div class="invalid-feedback">Please provide your last name.</div>
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="email" class="form-label">Email Address *</label>
-                                    <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label-custom">Email Address *</label>
+                                    <input type="email" class="form-control form-control-custom" id="email" required placeholder="Enter your email">
+                                    <div class="invalid-feedback">Please provide a valid email address.</div>
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="phone" class="form-label">Phone Number</label>
-                                    <input type="tel" class="form-control" id="phone">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label-custom">Phone Number</label>
+                                    <input type="tel" class="form-control form-control-custom" id="phone" placeholder="Enter your phone number">
                                 </div>
-                                <div class="col-12">
-                                    <label for="company" class="form-label">Company Name</label>
-                                    <input type="text" class="form-control" id="company">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label-custom">Company Name</label>
+                                    <input type="text" class="form-control form-control-custom" id="company" placeholder="Enter your company name">
                                 </div>
-                                <div class="col-12">
-                                    <label for="service" class="form-label">Service Interested In *</label>
-                                    <select class="form-control" id="service" required>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label-custom">Service Interest *</label>
+                                    <select class="form-select form-select-custom" id="service" required>
                                         <option value="">Select a service</option>
+                                        <option value="digital-marketing">Digital Marketing</option>
+                                        <option value="web-design">Web Design</option>
                                         <option value="seo">SEO Optimization</option>
-                                        <option value="social-media">Social Media Marketing</option>
-                                        <option value="web-development">Web Development</option>
-                                        <option value="mobile-app">Mobile App Development</option>
-                                        <option value="analytics">Digital Analytics</option>
-                                        <option value="brand-design">Brand Design</option>
+                                        <option value="analytics">Analytics & Insights</option>
+                                        <option value="consultation">Free Consultation</option>
                                         <option value="other">Other</option>
                                     </select>
+                                    <div class="invalid-feedback">Please select a service.</div>
                                 </div>
-                                <div class="col-12">
-                                    <label for="budget" class="form-label">Project Budget</label>
-                                    <select class="form-control" id="budget">
-                                        <option value="">Select budget range</option>
-                                        <option value="5k-10k">$5,000 - $10,000</option>
-                                        <option value="10k-25k">$10,000 - $25,000</option>
-                                        <option value="25k-50k">$25,000 - $50,000</option>
-                                        <option value="50k+">$50,000+</option>
-                                    </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label-custom">Budget Range</label>
+                                <select class="form-select form-select-custom" id="budget">
+                                    <option value="">Select budget range</option>
+                                    <option value="under-5k">Under $5,000</option>
+                                    <option value="5k-10k">$5,000 - $10,000</option>
+                                    <option value="10k-25k">$10,000 - $25,000</option>
+                                    <option value="25k-50k">$25,000 - $50,000</option>
+                                    <option value="50k-plus">$50,000+</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label-custom">Message *</label>
+                                <textarea class="form-control form-control-custom" id="message" rows="5" required placeholder="Tell us about your project and goals..."></textarea>
+                                <div class="invalid-feedback">Please provide a message.</div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                    <label class="form-check-label text-secondary" for="newsletter">
+                                        Subscribe to our newsletter for marketing tips and updates
+                                    </label>
                                 </div>
-                                <div class="col-12">
-                                    <label for="message" class="form-label">Project Details *</label>
-                                    <textarea class="form-control" id="message" rows="5" placeholder="Tell us about your project, goals, and requirements..." required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="newsletter">
-                                        <label class="form-check-label" for="newsletter">
-                                            Subscribe to our newsletter for digital marketing tips and updates
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary-custom btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
                             </div>
                         </form>
                     </div>
                 </div>
-                
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="map-container fade-in-up">
+                        <div class="map-placeholder">
+                            <div class="text-center">
+                                <i class="fas fa-map-marker-alt fa-3x mb-3"></i>
+                                <h5>Interactive Map</h5>
+                                <p>Find us at our headquarters</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-lg-4">
-                    <div class="contact-info">
-                        <h4 class="mb-4">Contact Information</h4>
-                        
-                        <div class="contact-item">
-                            <div class="icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h6>Our Office</h6>
-                                <p>123 Digital Street<br>Tech City, TC 12345<br>United States</p>
-                            </div>
+                    <div class="office-card fade-in-up">
+                        <div class="office-icon">
+                            <i class="fas fa-building"></i>
                         </div>
-                        
-                        <div class="contact-item">
-                            <div class="icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div>
-                                <h6>Phone</h6>
-                                <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h6>Email</h6>
-                                <p>hello@Clickvanta.com<br>support@Clickvanta.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div>
-                                <h6>Business Hours</h6>
-                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-4">
-                            <h6>Follow Us</h6>
-                            <div class="social-links">
-                                <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="me-2"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
+                        <h4>Headquarters</h4>
+                        <p class="text-secondary">
+                            123 Innovation Drive<br>
+                            Tech District, Suite 500<br>
+                            San Francisco, CA 94105<br>
+                            United States
+                        </p>
+                        <hr style="border-color: rgba(255,255,255,0.1);">
+                        <p class="text-secondary small mb-0">
+                            <i class="fas fa-clock me-2"></i>Mon-Fri: 9AM-6PM PST
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
+    <!-- Office Locations -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Our Global Presence</h2>
+                <p class="lead text-secondary">Serving clients worldwide with local expertise</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="office-card fade-in-up">
+                        <div class="office-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <h5>New York Office</h5>
+                        <p class="text-secondary">
+                            456 Business Ave<br>
+                            Manhattan, NY 10001
+                        </p>
+                        <small class="text-secondary">+1 (555) 987-6543</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="office-card fade-in-up">
+                        <div class="office-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <h5>London Office</h5>
+                        <p class="text-secondary">
+                            789 Digital Street<br>
+                            London, UK EC1A 1BB
+                        </p>
+                        <small class="text-secondary">+44 20 7123 4567</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="office-card fade-in-up">
+                        <div class="office-icon">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <h5>Singapore Office</h5>
+                        <p class="text-secondary">
+                            321 Marina Bay<br>
+                            Singapore 018956
+                        </p>
+                        <small class="text-secondary">+65 6123 4567</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <!-- <section class="faq-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <h2>Ready to Join Our Journey?</h2>
-                    <p>Whether you're looking for a career opportunity or want to partner with us on your next project, we'd love to hear from you.</p>
-                    <div class="d-flex gap-3 justify-content-center flex-wrap">
-                        <button class="btn btn-light btn-lg">View Open Positions</button>
-                        <button class="btn btn-outline-light btn-lg">Start a Project</button>
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold">Frequently Asked Questions</h2>
+                        <p class="lead text-secondary">Quick answers to common questions</p>
+                    </div>
+                    <div class="accordion accordion-custom fade-in-up" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How quickly can you start working on my project?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We typically begin new projects within 1-2 business days after contract signing. For urgent projects, we offer expedited onboarding within 24 hours.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What's included in your digital marketing services?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our comprehensive digital marketing services include SEO optimization, social media management, content creation, PPC advertising, email marketing, analytics reporting, and AI-powered campaign optimization.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Do you offer custom web design packages?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we create fully customized web designs tailored to your brand and business goals. All our websites are responsive, SEO-optimized, and built with the latest technologies.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    What makes your AI-powered approach different?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our AI technology continuously analyzes campaign performance, audience behavior, and market trends to automatically optimize your marketing efforts for maximum ROI and engagement.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    Do you provide ongoing support and maintenance?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer 24/7 support, regular performance monitoring, monthly reporting, and continuous optimization to ensure your digital presence stays competitive.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
- 
+    </section> -->
+
+   
 
   <div id="site-footer"></div>
- 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>   
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-     <script src="assets/js/include.js"></script>
-    <script src="assets/js/custom.js"></script> 
-
- 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>    
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/include.js"></script>
 </body>
 </html>

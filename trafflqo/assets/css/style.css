@@ -305,3 +305,116 @@
             color: var(--accent-color);
         }
 
+
+         .contact-section {
+            padding: 6rem 0;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 212, 255, 0.1);
+            border-color: var(--accent-color);
+        }
+
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+        }
+
+        .form-control-custom {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: var(--text-primary);
+            padding: 1rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control-custom:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 0.2rem rgba(0, 212, 255, 0.25);
+            color: var(--text-primary);
+        }
+
+        .form-control-custom::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .form-label-custom {
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-select-custom {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: var(--text-primary);
+            padding: 1rem;
+        }
+
+        .form-select-custom:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 0.2rem rgba(0, 212, 255, 0.25);
+            color: var(--text-primary);
+        }
+
+        .form-select-custom option {
+            background: var(--secondary-bg);
+            color: var(--text-primary);
+        }
+
+        /* Map Section */
+        .map-section {
+            background-color: var(--secondary-bg);
+            padding: 6rem 0;
+        }
+
+        .map-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            height: 400px;
+            position: relative;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--secondary-bg), var(--primary-bg));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+        }
+
