@@ -18,4 +18,5 @@ document.addEventListener("DOMContentLoaded", () => {
   loadHTML("#site-header", "includes/header.html");
   loadHTML("#site-footer", "includes/footer.html");
   loadHTML("#site-disclaimer", "includes/disclaimer.html");
+
 });

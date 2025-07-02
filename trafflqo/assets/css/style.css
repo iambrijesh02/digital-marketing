@@ -418,3 +418,20 @@
             font-size: 1.2rem;
         }
 
+.modal-content {
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .form-control {
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .modal-header {
+      border-bottom: none;
+    }
+
+    .modal-footer {
+      border-top: none;
+    }

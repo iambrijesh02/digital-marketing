@@ -25,3 +25,7 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+         .modal-dialog {
+        margin: 1rem;
+      }
