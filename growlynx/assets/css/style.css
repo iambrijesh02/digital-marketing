@@ -201,7 +201,7 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.5rem;
-            color: white;
+            color: var(--accent-pink);
             font-size: 2rem;
         }
 
