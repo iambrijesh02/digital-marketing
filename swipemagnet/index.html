@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwipeMagnet- Digital Marketing & Technology Solutions</title>   
+    <meta name="description" content="SwipeMagnetoffers cutting-edge digital marketing and technology solutions to help businesses grow online. From SEO and social media to web development and automation, we drive results that matter." />
+    <meta name="keywords" content="SwipeMagnet, digital marketing agency, SEO services, social media marketing, PPC, web development, marketing automation, online growth, branding solutions, tech agency" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    
+    <style>       
+
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--light-green);
+            border-top: 4px solid var(--primary-green);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 168, 107, 0.3);
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <div id="site-header"></div>
+ 
+<section class="hero" id="home">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 hero-content">
+        <h1 class="animate__animated animate__fadeInUp">
+          Drive <span class="highlight">Digital Success</span> with Data-Driven Marketing
+        </h1>
+        <p class="animate__animated animate__fadeInUp animate__delay-1s">
+          SwipeMagnet empowers your brand with innovative strategies, smart automation, and performance-focused campaigns — designed to maximize visibility, engagement, and ROI.
+        </p>
+        <div class="d-flex gap-3 flex-wrap animate__animated animate__fadeInUp animate__delay-2s">
+          <button class="btn btn-primary btn-lg">Get Started</button>
+          <!-- <button class="btn btn-outline-light btn-lg">Explore Services</button> -->
+        </div>
+      </div>
+      <div class="col-lg-6 mt-5 mt-lg-0">
+        <img src="assets/images/digital.gif" alt="Digital Marketing Strategy" class="img-fluid animate__animated animate__fadeInRight animate__delay-1s">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+   
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-subtitle">We offer comprehensive digital marketing and technology solutions to help your business grow and succeed in the competitive digital landscape.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>SEO Optimization</h4>
+                        <p>Boost your online visibility and drive organic traffic with our comprehensive SEO strategies and proven techniques.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Keyword Research</li>
+                            <li><i class="fas fa-check text-success me-2"></i>On-Page SEO</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Technical SEO</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h4>Social Media Marketing</h4>
+                        <p>Build your brand presence and engage with your audience across all major social media platforms.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Content Strategy</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Community Management</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Paid Advertising</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Web Development</h4>
+                        <p>Create stunning, responsive websites that convert visitors into customers with our expert development team.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Custom Development</li>
+                            <li><i class="fas fa-check text-success me-2"></i>E-commerce Solutions</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Mobile Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Mobile App Development</h4>
+                        <p>Transform your ideas into powerful mobile applications for iOS and Android platforms.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Native Development</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Cross-Platform Apps</li>
+                            <li><i class="fas fa-check text-success me-2"></i>UI/UX Design</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4>Digital Analytics</h4>
+                        <p>Make data-driven decisions with our comprehensive analytics and reporting solutions.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Performance Tracking</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Custom Dashboards</li>
+                            <li><i class="fas fa-check text-success me-2"></i>ROI Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>Brand Design</h4>
+                        <p>Create a memorable brand identity that resonates with your target audience and stands out from the competition.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Logo Design</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Brand Guidelines</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Marketing Materials</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about section-padding bg-light" id="about">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="section-title">About SwipeMagnet</h2>
+        <p class="section-subtitle">
+          At SwipeMagnet, we’re dedicated to transforming brands through intelligent marketing, data-driven strategies, and next-generation digital solutions that inspire growth and measurable success.
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <div class="col-lg-6">
+        <div class="vision-mission-card">
+          <div class="icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3>Our Vision</h3>
+          <p>
+            To redefine digital excellence by empowering businesses to evolve, innovate, and lead through creative marketing strategies and advanced technology integration.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="vision-mission-card">
+          <div class="icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Our Mission</h3>
+          <p>
+            To deliver impactful digital experiences and performance-driven marketing solutions that accelerate brand growth, build trust, and create long-term value for our clients.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+   
+    <section class="faq section-padding">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Find answers to common questions about our services and processes.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What services does SwipeMagnetoffer?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer comprehensive digital marketing and technology services including SEO optimization, social media marketing, web development, mobile app development, digital analytics, and brand design. Our team specializes in creating custom solutions tailored to your business needs.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How long does a typical project take?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Project timelines vary depending on scope and complexity. Simple websites typically take 4-6 weeks, while complex applications can take 3-6 months. We provide detailed timelines during our initial consultation and keep you updated throughout the process.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Do you provide ongoing support and maintenance?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we offer comprehensive support and maintenance packages to ensure your digital assets continue to perform optimally. This includes regular updates, security monitoring, performance optimization, and technical support.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    What industries do you work with?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We work with businesses across various industries including e-commerce, healthcare, education, food & beverage, real estate, automotive, travel & tourism, and finance. Our adaptable approach allows us to serve clients in virtually any sector.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    How do you measure project success?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We establish clear KPIs and success metrics at the beginning of each project. These may include website traffic, conversion rates, app downloads, user engagement, or ROI depending on your goals. We provide regular reports and analytics to track progress.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    What is your pricing structure?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our pricing is project-based and depends on scope, complexity, and timeline. We offer competitive rates and flexible payment options. Contact us for a free consultation and custom quote tailored to your specific requirements.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+ 
+    <section class="industries section-padding bg-light" id="industries">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Industries We Serve</h2>
+                    <p class="section-subtitle">Our expertise spans across multiple industries, helping businesses of all sizes achieve their digital goals.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h5>E-commerce</h5>
+                        <p>Online retail and marketplace solutions</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h5>Healthcare</h5>
+                        <p>Medical and wellness digital solutions</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h5>Education</h5>
+                        <p>EdTech and learning platforms</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h5>Food & Beverage</h5>
+                        <p>Restaurant and food delivery solutions</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h5>Real Estate</h5>
+                        <p>Property and construction digital marketing</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h5>Automotive</h5>
+                        <p>Vehicle and transportation solutions</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h5>Travel & Tourism</h5>
+                        <p>Hospitality and travel booking platforms</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h5>Finance</h5>
+                        <p>FinTech and banking solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="technology section-padding">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Technology We Use</h2>
+                    <p class="section-subtitle">We leverage the latest technologies and tools to deliver cutting-edge solutions that drive results.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h6>React</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <h6>Node.js</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h6>Python</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h6>AWS</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h6>Google Cloud</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <h6>Docker</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-angular"></i>
+                        </div>
+                        <h6>Angular</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-vuejs"></i>
+                        </div>
+                        <h6>Vue.js</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-laravel"></i>
+                        </div>
+                        <h6>Laravel</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-wordpress"></i>
+                        </div>
+                        <h6>WordPress</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fab fa-shopify"></i>
+                        </div>
+                        <h6>Shopify</h6>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="tech-item">
+                        <div class="tech-logo">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h6>MongoDB</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+   
+
+
+  <div id="site-footer"></div>
+  <div id="site-disclaimer"></div>
+ 
+
+    <!-- Scroll to Top Button -->
+    <a href="#home" class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  
+     <script src="assets/js/include.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+ 
+</body>
+</html>

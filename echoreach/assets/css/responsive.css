@@ -1,0 +1,31 @@
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .service-card {
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in-up.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+         .modal-dialog {
+        margin: 1rem;
+      }

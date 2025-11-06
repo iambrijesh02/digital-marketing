@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoReach - Digital Marketing & Web Design Excellence</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+
+    <style>
+        /* 🌙 Dark Theme Enhancement */
+        body {
+            background-color: #0e0e0e;
+            color: #e5e5e5;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: #bdbdbd;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* About Cards */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .about-card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 35px 30px;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+            border-color: #00d4ff;
+            box-shadow: 0 0 20px rgba(127, 0, 255, 0.2);
+        }
+
+        .about-card h3 {
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .about-card p {
+            color: #c0c0c0;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+       .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.feature-item {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    border-color: #00d4ff;
+    box-shadow: 0 0 20px rgba(127, 0, 255, 0.2);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #00d4ff;
+    margin-bottom: 20px;
+}
+
+.feature-item h4 {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: #bdbdbd;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+    max-width: 90%;
+}
+        /* Primary Accent */
+        .text-primary-custom {
+            color: #00d4ff !important;
+        }
+
+        /* Symmetry & Animation */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-in-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Footer Placeholder */
+        #site-footer {
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="site-header"></div>
+
+    <section id="about" class="section mt-5">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>About Adlaunchy</h2>
+                <p>We are a forward-thinking digital agency dedicated to transforming businesses through innovative technology solutions and strategic digital marketing.</p>
+            </div>
+            
+            <div class="about-grid animate-on-scroll">
+                <div class="about-card">
+                    <h3><i class="fas fa-eye text-primary-custom me-2"></i>Our Vision</h3>
+                    <p>To be the leading catalyst for digital transformation, empowering businesses worldwide to achieve unprecedented growth through innovative technology solutions and strategic digital marketing approaches.</p>
+                </div>
+                <div class="about-card">
+                    <h3><i class="fas fa-bullseye text-primary-custom me-2"></i>Our Mission</h3>
+                    <p>We are committed to delivering exceptional web development, digital marketing, and technology solutions that drive measurable results, foster innovation, and create lasting partnerships with our clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <h2>Why Choose Adlaunchy</h2>
+            <p>We combine expertise, innovation, and dedication to deliver exceptional results for your business.</p>
+        </div>
+        
+        <div class="features-grid animate-on-scroll">
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+                <h4>Rapid Deployment</h4>
+                <p>Quick turnaround times without compromising quality, getting your projects live faster than traditional agencies.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-users"></i></div>
+                <h4>Expert Team</h4>
+                <p>Seasoned professionals with deep expertise in web development, digital marketing, and emerging technologies.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                <h4>Data-Driven Results</h4>
+                <p>Every strategy is backed by comprehensive analytics and performance metrics to ensure measurable success.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                <h4>24/7 Support</h4>
+                <p>Round-the-clock technical support and maintenance to keep your digital assets running smoothly.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <div id="site-footer"></div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/include.js"></script>
+    <script src="assets/js/custom.js"></script> 
+
+    <script>
+        // Scroll animation trigger
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+        elements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
