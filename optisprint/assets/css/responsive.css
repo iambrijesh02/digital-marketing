@@ -1,0 +1,49 @@
+   /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .floating-card {
+                display: none;
+            }
+        }
+
+          
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-gradient);
+            border-radius: 4px;
+        }
+
+        /* Loading Animation */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+        }
